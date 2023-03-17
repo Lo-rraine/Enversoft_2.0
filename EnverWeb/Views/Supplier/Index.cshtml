@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Enversoft.Models.Supplier>
+
+<div class="d-flex justify-content-center mt-5 bg-opacity-50 bg-light pb-5">
+    <div style="width:70%">
+        <h1 class="d-flex justify-content-center mt-5 mb-5">SUPPLIERS</h1>
+
+<div class="d-flex justify-content-center mb-3">
+            <a class="btn btn-outline-secondary me-2" asp-controller="Supplier" asp-action="Create"><i class="bi bi-plus-square"></i> Create New</a>
+            <a class="btn btn-outline-secondary asp-controller="Supplier" asp-action="Search"><i class="bi bi-telephone"></i> Find Telephone</a>
+
+</div>
+
+
+
+<table id="supplierTable" class="table table-hover table-bordered rounded">
+    <thead class="table-secondary">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Telephone No</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model)
+        {
+            <tr>
+                <td>@supplier.Code</td>
+                <td>@supplier.Name</td>
+                <td>@supplier.TelelphoneNo</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+</div>
+
